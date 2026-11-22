@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-plum: #3B174F;
+  --color-plum-deep: #260D35;
+  --color-cream: #F8F3E8;
+  --color-cream-soft: #FBF8F2;
+  --color-gold: #D4AF37;
+  --color-gold-light: #EAD074;
+  --color-gold-hover: #B89022;
+  --color-mauve: #6A4B78;
+  --color-pure: #FFFFFF;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
